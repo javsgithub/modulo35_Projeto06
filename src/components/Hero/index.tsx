@@ -1,5 +1,6 @@
-import logo from '../../assets/images/logo.png'
 import { Container, HeroContainer, Logo } from './styles'
+
+import logo from '../../assets/images/logo.png'
 
 const Hero = () => (
   <HeroContainer>

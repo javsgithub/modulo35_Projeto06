@@ -1,14 +1,8 @@
-import estrela from '../../assets/images/estrela.png'
 import Button from '../Button'
-
-import {
-  Description,
-  InfoTags,
-  RateContainer,
-  RestaurantContainer,
-  Title
-} from './styles'
 import Tag from '../Tag'
+import * as S from './styles'
+
+import estrela from '../../assets/images/estrela.png'
 
 export type Props = {
   image: string
@@ -19,22 +13,22 @@ export type Props = {
 }
 
 const Restaurant = ({ image, title, rate, description, infoTags }: Props) => (
-  <RestaurantContainer>
+  <S.RestaurantContainer>
     <img src={image} alt={title} />
-    <InfoTags>
+    <S.InfoTags>
       {infoTags.map((tag) => (
         <Tag key={tag}>{tag}</Tag>
       ))}
-    </InfoTags>
+    </S.InfoTags>
     <div className="info">
       <div className="title-rate">
-        <Title>{title}</Title>
-        <RateContainer>
+        <S.Title>{title}</S.Title>
+        <S.RateContainer>
           <span>{rate}</span>
           <img src={estrela} alt="estrela" />
-        </RateContainer>
+        </S.RateContainer>
       </div>
-      <Description>{description}</Description>
+      <S.Description>{description}</S.Description>
       <Button
         type="link"
         to="/first-restaurant"
@@ -44,7 +38,7 @@ const Restaurant = ({ image, title, rate, description, infoTags }: Props) => (
         Saiba mais
       </Button>
     </div>
-  </RestaurantContainer>
+  </S.RestaurantContainer>
 )
 
 export default Restaurant

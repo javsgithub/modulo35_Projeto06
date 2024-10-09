@@ -1,13 +1,10 @@
 import { HeaderBar, HeroContainer, Logo } from './styles'
-import logo from '../../assets/images/logo.png'
 import { MainContainer } from '../../styles'
 import HomeButton from '../HomeButton'
 
-type Props = {
-  to?: '/'
-}
+import logo from '../../assets/images/logo.png'
 
-const Header = ({ to }: Props) => (
+const Header = () => (
   <HeroContainer>
     <MainContainer>
       <HeaderBar>

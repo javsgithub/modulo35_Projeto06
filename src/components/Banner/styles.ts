@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+
 import { colors, MainContainer } from '../../styles'
 
 export const Image = styled.div`

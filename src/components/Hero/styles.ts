@@ -1,6 +1,8 @@
 import styled from 'styled-components'
-import vector from '../../assets/images/vector.png'
+
 import { colors } from '../../styles'
+
+import vector from '../../assets/images/vector.png'
 
 export const HeroContainer = styled.header`
   padding: 40px 0 64px;

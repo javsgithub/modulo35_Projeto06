@@ -1,11 +1,11 @@
 import Footer from '../../components/Footer'
 import { MainContainer } from '../../styles'
 import Restaurant from '../../models/Restaurant'
-
-import pizza from '../../assets/images/pizza.png'
 import Header from '../../components/RestaurantHeader'
 import DishList from '../../components/DishList'
 import Banner from '../../components/Banner'
+
+import pizza from '../../assets/images/pizza.png'
 
 const dishes: Restaurant[] = [
   {

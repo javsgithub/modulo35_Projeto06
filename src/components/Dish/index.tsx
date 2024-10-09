@@ -1,6 +1,5 @@
-import Button from '../Button'
-
 import { Description, DishContainer, Title } from './styles'
+import Button from '../Button'
 
 export type Props = {
   image: string
