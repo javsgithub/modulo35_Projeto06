@@ -9,15 +9,13 @@ export const colors = {
 
 const GlobalCss = createGlobalStyle`
   * {
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Roboto, sans-serif;
   }
 
-  body{
-    width: 1366px;
-    height: 2148px;
+  body {
     background-color: ${colors.pink1}
   }
 `

@@ -1,68 +1,22 @@
-import Dish from '../Dish'
+import Restaurant from '../../models/Restaurant'
 import { Dishes } from './styles'
+import Rest from '../Restaurant'
+import Dish from '../Dish'
 
-const DishList = () => (
+type Props = {
+  dishes: Restaurant[]
+}
+
+const DishList = ({ dishes }: Props) => (
   <Dishes>
-    <Dish
-      image="../../assets/images/sushi.png"
-      tittle="Hioki Sushi"
-      rate={4.9}
-      description="Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos,
-      sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e
-      qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!"
-      infoTags={['Destaques da Semana', 'Japonesa']}
-      action="Saiba mais"
-    />
-    <Dish
-      image="../../assets/images/sushi.png"
-      tittle="Hioki Sushi"
-      rate={4.9}
-      description="Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos,
-      sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e
-      qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!"
-      infoTags={['Destaques da Semana', 'Japonesa']}
-      action="Saiba mais"
-    />
-    <Dish
-      image="../../assets/images/sushi.png"
-      tittle="Hioki Sushi"
-      rate={4.9}
-      description="Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos,
-      sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e
-      qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!"
-      infoTags={['Destaques da Semana', 'Japonesa']}
-      action="Saiba mais"
-    />
-    <Dish
-      image="../../assets/images/sushi.png"
-      tittle="Hioki Sushi"
-      rate={4.9}
-      description="Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos,
-      sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e
-      qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!"
-      infoTags={['Destaques da Semana', 'Japonesa']}
-      action="Saiba mais"
-    />
-    <Dish
-      image="../../assets/images/sushi.png"
-      tittle="Hioki Sushi"
-      rate={4.9}
-      description="Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos,
-      sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e
-      qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!"
-      infoTags={['Destaques da Semana', 'Japonesa']}
-      action="Saiba mais"
-    />
-    <Dish
-      image="../../assets/images/sushi.png"
-      tittle="Hioki Sushi"
-      rate={4.9}
-      description="Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos,
-      sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e
-      qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!"
-      infoTags={['Destaques da Semana', 'Japonesa']}
-      action="Saiba mais"
-    />
+    {dishes.map((dish) => (
+      <Dish
+        key={dish.id}
+        image={dish.image}
+        title={dish.title}
+        description={dish.description}
+      />
+    ))}
   </Dishes>
 )
 

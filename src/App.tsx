@@ -1,17 +1,25 @@
-import DishList from './components/DishList'
-import Footer from './components/Footer'
-import Hero from './components/Hero'
-import GlobalCss, { MainContainer } from './styles'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
+import GlobalCss from './styles'
+import Home from './pages/Home'
+import FirstRestaurant from './pages/FirstRestaurant'
+
+const routes = createBrowserRouter([
+  {
+    path: '/',
+    element: <Home />
+  },
+  {
+    path: '/first-restaurant',
+    element: <FirstRestaurant />
+  }
+])
 
 function App() {
   return (
     <>
       <GlobalCss />
-      <Hero />
-      <MainContainer>
-        <DishList />
-      </MainContainer>
-      <Footer />
+      <RouterProvider router={routes} />
     </>
   )
 }

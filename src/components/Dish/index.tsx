@@ -1,52 +1,27 @@
-import estrela from '../../assets/images/estrela.png'
-import {
-  Button,
-  Description,
-  DishContainer,
-  GradeContainer,
-  Tittle
-} from './styles'
-import Tag from '../Tag'
+import Button from '../Button'
 
-type Props = {
+import { Description, DishContainer, Title } from './styles'
+
+export type Props = {
   image: string
-  // standaut: string
-  // category: string
-  tittle: string
-  rate: number
+  title: string
   description: string
-  infoTags: string[]
-  action: string
 }
 
-const Dish = ({
-  image,
-  tittle,
-  rate,
-  description,
-  infoTags,
-  action
-}: Props) => (
+const Dish = ({ image, title, description }: Props) => (
   <DishContainer>
-    <section>
-      <img src={image} alt={tittle} />
-      <div>
-        {infoTags.map((tag) => (
-          <Tag key={tag}>{tag}</Tag>
-        ))}
-      </div>
-      <div className="info">
-        <div>
-          <Tittle>{tittle}</Tittle>
-          <GradeContainer>
-            <span>{rate}</span>
-            <img src={estrela} alt="estrela" />
-          </GradeContainer>
-        </div>
-        <Description>{description}</Description>
-        <Button>{action}</Button>
-      </div>
-    </section>
+    <img src={image} alt={title} />
+    <Title>{title}</Title>
+    <Description>{description}</Description>
+    <Button
+      type="link"
+      to="/first-restaurant"
+      title="Clique para ver as opções deste restaurante"
+      size="big"
+      style={{ display: 'block' }}
+    >
+      Adicionar ao carrinho
+    </Button>
   </DishContainer>
 )
 

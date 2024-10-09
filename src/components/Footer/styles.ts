@@ -30,4 +30,5 @@ export const Paragraph = styled.p`
   font-weight: 400;
   text-align: center;
   line-height: 12px;
+  display: inline-block;
 `
