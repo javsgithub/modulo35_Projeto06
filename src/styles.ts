@@ -19,7 +19,7 @@ const GlobalCss = createGlobalStyle`
     background-color: ${colors.pink1}
   }
 `
-export const MainContainer = styled.main`
+export const MainContainer = styled.div`
   max-width: 1024px;
   width: 100%;
   margin: 80px auto 0;

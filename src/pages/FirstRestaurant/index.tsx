@@ -57,7 +57,7 @@ const FirstRestaurant = () => (
     <Header />
     <Banner />
     <MainContainer>
-      <DishList dishes={dishes} />
+      <DishList title={''} dishes={dishes} />
     </MainContainer>
     <Footer />
   </>
